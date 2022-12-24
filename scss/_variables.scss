@@ -1,0 +1,55 @@
+// media Queries
+@mixin vxsm {
+  @media (max-width: #{$screen-vxsm-max}) {
+    @content;
+  }
+}
+@mixin xsm {
+  @media (max-width: #{$screen-xsm-max}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// MEDIUM DEVICES
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// LARGE DEVICES
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// EXTRA LARGE DEVICES
+@mixin xl {
+  @media (min-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+$screen-vxsm-max: 375px;
+$screen-xsm-max: 460px;
+$screen-sm-max: 576px;
+$screen-md-max: 768px;
+$screen-lg-max: 1000px;
+$screen-xl-max: 1401px;
+
+$cubic: cubic-bezier(0.48, 0.43, 0.29, 1.3);
+
+// colors
+$primary: #fcc537;
+$bg-light: #bba232;
+$bg-lightly: #484338;
+$white: #ffffff;
+$text: #1f2026;
+$border: #cccccc;

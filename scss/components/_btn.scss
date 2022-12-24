@@ -1,0 +1,55 @@
+@use "./variables" as *;
+@use "./typography" as *;
+
+.btn-light {
+  margin: 0 3px;
+  width: 85px;
+  height: 34px;
+  background-color: $bg-light;
+  border: none;
+  border-radius: 5px;
+  opacity: 0.8;
+  outline: none;
+  color: $white;
+  font-size: 0.8rem;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+  @include sm {
+    margin-bottom: 5px;
+  }
+}
+
+.btn-lightly {
+  background-color: $bg-lightly;
+  height: 36px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-heavy {
+  width: 92px;
+  height: 35px;
+  background-color: $primary;
+  border: none;
+  outline: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0 20px;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:hover {
+    background-color: $bg-light;
+    color: $white;
+  }
+}

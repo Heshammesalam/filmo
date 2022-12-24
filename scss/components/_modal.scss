@@ -1,0 +1,11 @@
+@use "./variables" as *;
+@use "./typography" as *;
+
+.color-primary {
+  color: $primary;
+}
+
+.small-width {
+  width: 30px;
+  height: 30px;
+}

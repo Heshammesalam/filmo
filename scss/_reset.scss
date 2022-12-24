@@ -1,0 +1,76 @@
+@use "./variables" as *;
+@use "./typography" as *;
+
+html {
+  font-size: 16px;
+
+  @media only screen and (min-width: 1400px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(#0b0e1e, #47402f);
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+  color: #fff;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    background-color: rgba(54, 48, 98, 0.8);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 5px;
+  }
+}
+
+// animations
+.reveal {
+  // opacity: 0;
+  // visibility: hidden;
+
+  @for $i from 1 through 15 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 150}ms;
+    }
+  }
+}
+
+.slide-up {
+  animation: slide-up 2s ease-in-out;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: rotateY(0deg);
+  }
+}
